@@ -1,0 +1,23 @@
+.container-sm {
+  display: flex;
+}
+
+.formInside {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.subBtn {
+  align-self: flex-end;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  max-width: 70%;
+}

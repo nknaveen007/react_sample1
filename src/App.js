@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import BottomView from './components/BottomView.jsx'
+import TopForm from './components/TopForm.jsx'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+    const [detailsList, setdetailsList] = useState({})
+    const [yearList, setyearList] = useState([])
+
+    return (
+        <div>
+            <TopForm setyearList={setyearList} setdetailsList={setdetailsList} yearList={yearList} detailsList={detailsList}/>
+            <BottomView yearList={yearList} detailsList={detailsList} setdetailsList={setdetailsList}/>
+        </div>
+ )    
 }
 
-export default App;
+export default App
